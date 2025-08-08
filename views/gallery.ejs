@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mes Photos</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mes Photos</h1>
+    <nav>
+      <a href="/logout">Déconnexion</a>
+    </nav>
+  </header>
+  <main>
+    <% photos.forEach(photo => { %>
+      <img src="<%= photo %>?w=400" alt="photo" />
+    <% }) %>
+  </main>
+</body>
+</html>
