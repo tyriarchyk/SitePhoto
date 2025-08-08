@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/contact">Contact</a>
+      <% if (!user) { %>
+        <a href="/login">Espace client</a>
+      <% } else { %>
+        <a href="/gallery">Mon espace</a>
+        <a href="/logout">Déconnexion</a>
+      <% } %>
+    </nav>
+  </header>
+  <main>
+    <% images.forEach(img => { %>
+      <img src="<%= img %>?w=400" alt="photo" />
+    <% }) %>
+  </main>
+</body>
+</html>
